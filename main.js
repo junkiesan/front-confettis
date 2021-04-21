@@ -21,6 +21,9 @@ function animateConfettis() {
     x: "random(-100,100)",
     z: "random(0,1000)",
     rotation: "random(-90,90)",
-    duration: 1
+    duration: 1.5
   })
+  .to('.slot div', {autoAlpha: 0, duration: 0.3},
+  '-=0.2')
+  .add
 }
