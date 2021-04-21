@@ -25,5 +25,7 @@ function animateConfettis() {
   })
   .to('.slot div', {autoAlpha: 0, duration: 0.3},
   '-=0.2')
-  .add
+  .add(() => {
+    containerSlot.innerHTML = "";
+  })
 }
