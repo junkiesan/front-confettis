@@ -5,6 +5,9 @@ const emojis = ["🍾", "🍻", "🎊", "🏄🏻‍♂️"];
 btnConfettis.addEventListener('click', fiesta)
 
 function fiesta(){
+
+  if(isTweening()) return;
+  
   for(let i = 0;i < 50; i++){
     const confetti = document.createElement('div');
     confetti.innerText = emojis[Math.floor(Math.random() * emojis.length)];
@@ -28,4 +31,9 @@ function animateConfettis() {
   .add(() => {
     containerSlot.innerHTML = "";
   })
+}
+
+function isTweening(){
+  return gsap.isTweening('.slot div');
+
 }
